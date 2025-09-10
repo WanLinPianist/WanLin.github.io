@@ -16,7 +16,7 @@ img{max-width:100%; height:auto; display:block}
 .menu a:hover{background:#f7f7fa}
 
 
-/* Hero (Home) */
+/* Hero (Home) 
 .hero{padding:96px 0 72px; text-align:center}
 .kicker{text-transform:uppercase; letter-spacing:.18em; color:var(--accent); font-size:.85rem}
 .title{font-family:"Playfair Display", Georgia, serif; font-size:clamp(2rem,5vw,3.2rem); line-height:1.2; margin:.5rem 0}
@@ -24,6 +24,73 @@ img{max-width:100%; height:auto; display:block}
 .cta{margin-top:1rem; display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap}
 .btn{display:inline-flex; align-items:center; gap:.45rem; padding:.75rem 1rem; border-radius:.6rem; border:1px solid var(--accent); color:var(--fg); text-decoration:none}
 .btn.primary{background:linear-gradient(135deg,var(--accent),#c8a96a); color:#fff; border:none; font-weight:700}
+*/
+/* Hero (Home) */
+.hero {
+  position: relative;
+  min-height: 90vh;  /* fills most of the screen */
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: url('assets/cover.jpg') center/cover no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* dark overlay */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1; /* ensures text sits above overlay */
+  color: #fff; /* white text for contrast */
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--accent);
+  font-size: .85rem;
+}
+
+.title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.2;
+  margin: .5rem 0;
+}
+
+.sub {
+  color: #f0f0f0; /* lighter than muted for visibility on dark background */
+}
+
+.cta {
+  margin-top: 1rem;
+  display: flex;
+  gap: .8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .75rem 1rem;
+  border-radius: .6rem;
+  border: 1px solid var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), #c8a96a);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+}
 
 
 /* Sections */
