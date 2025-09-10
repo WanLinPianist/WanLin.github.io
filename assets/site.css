@@ -32,7 +32,7 @@ img{max-width:100%; height:auto; display:block}
   display: grid;
   place-items: center;
   text-align: center;
-  background: url('assets/cover.jpg') center/cover no-repeat;
+  background: url('cover.jpg') center/cover no-repeat;
 }
 
 .hero::before {
